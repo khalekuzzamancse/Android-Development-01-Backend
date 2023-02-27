@@ -15,3 +15,5 @@ dependencyResolutionManagement {
 rootProject.name = "ServiceAndSecurity"
 include ':app'
 include ':contentproivder'
+include ':media_store_api'
+include ':media_store_api_google'

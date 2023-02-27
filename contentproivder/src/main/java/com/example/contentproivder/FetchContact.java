@@ -1,6 +1,7 @@
 package com.example.contentproivder;
 
 import android.content.ContentResolver;
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.net.Uri;
@@ -30,5 +31,8 @@ public class FetchContact {
             Log.i("ContactFetched",name+" : "+number);
         }
 
+
+
     }
+
 }
