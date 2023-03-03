@@ -9,10 +9,7 @@ import android.content.IntentFilter;
 import android.os.Bundle;
 import android.util.Log;
 
-import com.example.broadcast_receiver.R;
-import com.example.broadcast_receiver.localreceiver.MyLocalReceiver;
-
-public class LocalReceiver extends AppCompatActivity {
+public class DynamicReceiver extends AppCompatActivity {
     private  IntentFilter filter;
     private BroadcastReceiver receiver;
     @Override
