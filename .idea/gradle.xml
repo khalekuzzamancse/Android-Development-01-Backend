@@ -13,6 +13,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/broadcast_receiver" />
             <option value="$PROJECT_DIR$/contentproivder" />
             <option value="$PROJECT_DIR$/document_and_file_picker" />
             <option value="$PROJECT_DIR$/manage_all_files" />
