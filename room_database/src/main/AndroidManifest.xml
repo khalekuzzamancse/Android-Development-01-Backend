@@ -8,6 +8,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ServiceAndSecurity">
         <activity
+            android:name="worddatabase.ui.WordDatabaseScreen01"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
