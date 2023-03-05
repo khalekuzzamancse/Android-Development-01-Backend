@@ -1,4 +1,4 @@
-package worddatabase;
+package worddatabase.database;
 import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
@@ -14,5 +14,14 @@ public class Word {
     public Word(@NonNull String word, String definition) {
         this.word = word;
         this.definition = definition;
+    }
+
+    @NonNull
+    @Override
+    public String toString() {
+        return "Word{" +
+                "word='" + word + '\'' +
+                ", definition='" + definition + '\'' +
+                '}';
     }
 }

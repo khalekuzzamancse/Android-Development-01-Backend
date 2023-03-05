@@ -1,4 +1,4 @@
-package worddatabase;
+package worddatabase.database;
 
 import androidx.room.Dao;
 import androidx.room.Insert;

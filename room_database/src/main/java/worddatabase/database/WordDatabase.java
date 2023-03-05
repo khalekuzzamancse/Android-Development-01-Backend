@@ -1,4 +1,4 @@
-package worddatabase;
+package worddatabase.database;
 
 import android.content.Context;
 
@@ -27,6 +27,7 @@ public abstract class WordDatabase extends RoomDatabase {
         @Override
         public void onCreate(@NonNull SupportSQLiteDatabase db) {
             super.onCreate(db);
+            db.execSQL("INSERT INTO WordTable (word,definition) VALUES('A','Apple'),('B','Bat')");
         }
 
         @Override
