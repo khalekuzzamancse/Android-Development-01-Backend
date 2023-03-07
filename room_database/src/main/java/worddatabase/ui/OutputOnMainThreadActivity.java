@@ -8,14 +8,13 @@ import android.util.Log;
 
 import com.example.room_database.R;
 
-import java.sql.SQLIntegrityConstraintViolationException;
 import java.util.List;
 
 import worddatabase.database.Word;
 import worddatabase.database.WordDao;
 import worddatabase.database.WordDatabase;
 
-public class WordDatabaseScreen01 extends AppCompatActivity {
+public class OutputOnMainThreadActivity extends AppCompatActivity {
     private WordDatabase database;
 
     @Override
@@ -34,6 +33,6 @@ public class WordDatabaseScreen01 extends AppCompatActivity {
         List<Word> wordList = wordDao.getAllWords();
         Log.i("WordList", String.valueOf(wordList));
 
-
+       
     }
 }

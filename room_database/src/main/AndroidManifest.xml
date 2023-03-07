@@ -8,7 +8,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ServiceAndSecurity">
         <activity
-            android:name="worddatabase.ui.WordDatabaseScreen01"
+            android:name="worddatabase_using_architecture.ui.OutputOnBackgroundThread"
+            android:exported="false" />
+        <activity
+            android:name="worddatabase.ui.OutputOnMainThreadActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
