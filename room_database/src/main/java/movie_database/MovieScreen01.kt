@@ -1,15 +1,17 @@
 package movie_database
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
-import androidx.compose.material.Text
-import androidx.compose.runtime.Composable
+import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import movie_database.model.Movie
 import movie_database.ui.theme.ServiceAndSecurityTheme
 
 class MovieScreen01 : ComponentActivity() {
@@ -29,9 +31,19 @@ class MovieScreen01 : ComponentActivity() {
     }
 }
 
+@SuppressLint("UnrememberedMutableState")
 @Composable
 fun Greeting(name: String) {
-    Text(text = "Hello $name!")
+    var movie by mutableStateOf<Movie?>(Movie("ABCD","abc"))
+
+    Column() {
+        movie?.let {it->
+            MovieDisplay(movie = it)
+        }
+        BoxedText(name = "Abul")
+        BoxedText(name = "Babul")
+    }
+
 }
 
 @Preview(showBackground = true)
