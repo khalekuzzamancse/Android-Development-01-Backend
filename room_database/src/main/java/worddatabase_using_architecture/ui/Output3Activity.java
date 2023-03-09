@@ -13,11 +13,10 @@ import com.example.room_database.R;
 import java.util.List;
 
 import worddatabase.database.Word;
-import worddatabase.database.WordDatabase;
-import worddatabase_using_architecture.database.WordDao2;
-import worddatabase_using_architecture.database.WordDatabase2;
+import worddatabase_using_architecture.WordDao2;
+import worddatabase_using_architecture.WordDatabase2;
 
-public class OutputOnBackgroundThread extends AppCompatActivity {
+public class Output3Activity extends AppCompatActivity {
     private WordDatabase2 database;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

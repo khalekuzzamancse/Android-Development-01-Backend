@@ -1,4 +1,4 @@
-package worddatabase_using_architecture.database;
+package worddatabase_using_architecture;
 
 import androidx.lifecycle.LiveData;
 import androidx.room.Dao;

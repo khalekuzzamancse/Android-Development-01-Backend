@@ -4,6 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="worddatabase_using_architecture.ui.Output3Activity">
+    tools:context="worddatabase_using_architecture.ui.OutputActivity3">
 
 </androidx.constraintlayout.widget.ConstraintLayout>
