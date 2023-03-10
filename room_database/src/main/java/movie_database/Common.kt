@@ -18,7 +18,7 @@ fun BoxedText(name: String, onClick: () -> Unit = {}) {
         modifier = Modifier
             .fillMaxWidth()
             .padding(8.dp)//used as margin
-            .border(width = 2.dp, color = MaterialTheme.colorScheme.primary)
+            .border(width = 2.dp, color = MaterialTheme. colorScheme.primary)
             .padding(8.dp)
             .clickable { onClick() },
         text = name
