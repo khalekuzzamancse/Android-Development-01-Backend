@@ -4,12 +4,14 @@ import android.content.Context;
 import android.util.Log;
 
 import androidx.annotation.NonNull;
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 import androidx.work.Worker;
 import androidx.work.WorkerParameters;
 
 public class FindPrimes extends Worker {
     private long current;
     private final long max;
+
 
     public FindPrimes(@NonNull Context context, @NonNull WorkerParameters workerParams) {
         super(context, workerParams);
@@ -34,6 +36,10 @@ public class FindPrimes extends Worker {
     }
 
     private boolean isPrime(long current) {
+        for (int i = 2; i < current; i++) {
+            if (current % i == 0)
+                return false;
+        }
         return true;
     }
 }
