@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PrimeDataSource {
+    private MutableLiveData<Boolean>isRunning;
     private List<Long> primes;
     private MutableLiveData<Long> currentLiveData;
     private MutableLiveData<Long> maxLiveData;
@@ -17,11 +18,21 @@ public class PrimeDataSource {
         maxLiveData = new MutableLiveData<>(1_000_000L);
         primes = new ArrayList<>();
         primesLiveData = new MutableLiveData<>(primes);
+        isRunning=new MutableLiveData<>(false);
 
     }
 
     public LiveData<Long> getCurrentLiveData() {
         return currentLiveData;
+    }
+
+    public LiveData<Boolean> getIsRunning()
+    {
+        return isRunning;
+    }
+
+    public void setIsRunning(boolean running) {
+      this.isRunning.postValue(running);
     }
 
     public LiveData<Long> getMaxLiveData() {

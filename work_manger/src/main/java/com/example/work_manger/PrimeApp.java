@@ -10,22 +10,29 @@ import androidx.work.WorkManager;
 import java.util.concurrent.TimeUnit;
 
 public class PrimeApp extends Application {
-    public  static final String JOB_NAME="findPrimes";
+    public static final String JOB_NAME = "findPrimes";
+    private PrimeDataSource primeDataSource;
+
     @Override
     public void onCreate() {
         super.onCreate();
-        WorkManager workManager=WorkManager.getInstance(this);
+        primeDataSource = new PrimeDataSource();
+        WorkManager workManager = WorkManager.getInstance(this);
         OneTimeWorkRequest oneTimeWorkRequest;
-        Constraints c=
+        Constraints c =
                 new Constraints.Builder()
                         .setRequiresBatteryNotLow(true)
                         .build();
-        oneTimeWorkRequest=
+        oneTimeWorkRequest =
                 new OneTimeWorkRequest.Builder(FindPrimes.class)
                         .setConstraints(c)
                         .setInitialDelay(1, TimeUnit.SECONDS)
                         .build();
-        workManager.enqueueUniqueWork(JOB_NAME, ExistingWorkPolicy.REPLACE,oneTimeWorkRequest);
+        workManager.enqueueUniqueWork(JOB_NAME, ExistingWorkPolicy.REPLACE, oneTimeWorkRequest);
 
+    }
+
+    public PrimeDataSource getPrimeDataSource() {
+        return primeDataSource;
     }
 }
