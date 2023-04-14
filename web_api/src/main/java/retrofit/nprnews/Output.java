@@ -1,7 +1,9 @@
-package com.khalekuzzaman.just.cse.internent_connectivity.retrofit.newsapi;
+package retrofit.nprnews;
 
 import android.util.Log;
 
+import retrofit.nprnews.Feed;
+import retrofit.nprnews.NPRNewsService;
 import retrofit2.Call;
 import retrofit2.Response;
 import retrofit2.Retrofit;

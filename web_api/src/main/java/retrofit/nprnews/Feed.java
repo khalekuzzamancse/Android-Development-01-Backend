@@ -1,4 +1,4 @@
-package com.khalekuzzaman.just.cse.internent_connectivity.retrofit.newsapi;
+package retrofit.nprnews;
 
 import java.util.ArrayList;
 
