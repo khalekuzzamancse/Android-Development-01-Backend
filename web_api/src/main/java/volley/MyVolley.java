@@ -1,4 +1,4 @@
-package com.khalekuzzaman.just.cse.web_api.volley;
+package volley;
 
 import android.content.Context;
 import android.util.Log;
@@ -11,7 +11,6 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
-import org.json.JSONException;
 import org.json.JSONObject;
 
 public class MyVolley {
@@ -78,6 +77,23 @@ public class MyVolley {
     public void cancelARequest() {
         if (request != null)
             request.cancel();
+    }
+    public void doCustomRequest(){
+        //cancel is there already a request
+        cancelARequest();
+        //defining the callback with lambda
+        Response.Listener<CustomAPIResponse> onResponse = res -> {
+            Log.i("RESPONSE_GET_Custom", res.toString());
+        };
+        Response.ErrorListener onError = error -> {
+            Log.i("RESPONSE_GET_Custom", "Error");
+        };
+        final String URL = "https://feeds.npr.org/1019/feed.json";
+
+        request =
+                new MyAPIRequest(Request.Method.GET, URL,
+                                onResponse, onError);
+        queue.add(request);
     }
 
 }
