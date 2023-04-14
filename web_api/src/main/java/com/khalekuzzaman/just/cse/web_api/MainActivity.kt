@@ -10,6 +10,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         val myVolley=
             MyVolley.getInstance(this.applicationContext)
-        myVolley.doStringRequest()
+        myVolley.doJsonObjectRequest()
     }
 }
