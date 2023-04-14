@@ -13,9 +13,9 @@ import com.android.volley.toolbox.Volley;
 public class MyVolley {
     private static MyVolley instance;
     private Context context;
-    private RequestQueue queue;
+    private final RequestQueue queue;
     private Request request;
-    private Response.Listener responseListener = new Response.Listener() {
+    private final Response.Listener responseListener = new Response.Listener() {
         @Override
         public void onResponse(Object response) {
             Log.i("RESPONSE_GET", response.toString());
