@@ -1,4 +1,4 @@
-package com.khalekuzzaman.just.cse.internent_connectivity.retrofit;
+package com.khalekuzzaman.just.cse.internent_connectivity.retrofit.newsapi;
 
 import retrofit2.Call;
 import retrofit2.http.GET;

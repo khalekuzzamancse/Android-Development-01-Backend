@@ -1,7 +1,6 @@
-package com.khalekuzzaman.just.cse.internent_connectivity.retrofit;
+package com.khalekuzzaman.just.cse.internent_connectivity.retrofit.newsapi;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Feed {
     public String description;

@@ -1,4 +1,4 @@
-package com.khalekuzzaman.just.cse.internent_connectivity.retrofit;
+package com.khalekuzzaman.just.cse.internent_connectivity.retrofit.newsapi;
 
 public class FeedItem {
     public String url;
