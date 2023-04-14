@@ -82,7 +82,7 @@ public class MyVolley {
         //cancel is there already a request
         cancelARequest();
         //defining the callback with lambda
-        Response.Listener<CustomAPIResponse> onResponse = res -> {
+        Response.Listener<MyResponse> onResponse = res -> {
             Log.i("RESPONSE_GET_Custom", res.toString());
         };
         Response.ErrorListener onError = error -> {
@@ -91,7 +91,7 @@ public class MyVolley {
         final String URL = "https://feeds.npr.org/1019/feed.json";
 
         request =
-                new MyAPIRequest(Request.Method.GET, URL,
+                new MyRequest(Request.Method.GET, URL,
                                 onResponse, onError);
         queue.add(request);
     }

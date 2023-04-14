@@ -1,6 +1,6 @@
 package volley;
 
-public class CustomAPIResponse {
+public class MyResponse {
     public String title;
     public String description;
 
