@@ -1,15 +1,12 @@
 package retrofit.josnplaceholderapi;
 
 
-import android.net.wifi.hotspot2.omadm.PpsMoParser;
 import android.util.Log;
 
 import java.util.List;
 
 import retrofit.josnplaceholderapi.api.PostService;
 import retrofit.josnplaceholderapi.model.Post;
-import retrofit.nprnews.NPRNewsService;
-import retrofit.nprnews.model.Feed;
 import retrofit2.Call;
 import retrofit2.Response;
 import retrofit2.Retrofit;
