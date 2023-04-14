@@ -10,7 +10,8 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
-public class Output {
+public class MyVolley {
+    private static MyVolley instance;
     private Context context;
     private RequestQueue queue;
     private Request request;
@@ -23,18 +24,26 @@ public class Output {
     private Response.ErrorListener errorListener = new Response.ErrorListener() {
         @Override
         public void onErrorResponse(VolleyError error) {
-
+            Log.i("RESPONSE_GET", "Error");
         }
     };
 
-    public Output(Context context) {
+    private MyVolley(Context context) {
         this.context = context;
         queue = Volley.newRequestQueue(context);
     }
 
+    public static synchronized MyVolley getInstance(Context context) {
+        if (instance == null) {
+            instance = new MyVolley(context);
+        }
+        return instance;
+    }
+
     public void doStringRequest() {
         request = new
-                StringRequest(Request.Method.GET, "Htjjjj", responseListener, errorListener);
+                StringRequest(Request.Method.GET, "https://feeds.npr.org/1019/feed.json",
+                responseListener, errorListener);
         queue.add(request);
 
     }
@@ -43,4 +52,10 @@ public class Output {
         if (queue != null)
             queue.stop();
     }
+
+    public void cancelARequest() {
+        if (request != null)
+            request.cancel();
+    }
+
 }
