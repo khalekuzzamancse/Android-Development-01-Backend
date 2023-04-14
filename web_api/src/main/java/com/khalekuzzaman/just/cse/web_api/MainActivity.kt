@@ -5,6 +5,7 @@ import android.os.Bundle
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import retrofit.josnplaceholderapi.PostFetcher
+import retrofit.josnplaceholderapi.model.Post
 import retrofit.nprnews.Output
 
 class MainActivity : AppCompatActivity() {
@@ -12,7 +13,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         GlobalScope.launch {
-            PostFetcher().getPost(1,2)
+            PostFetcher()
         }
 
 

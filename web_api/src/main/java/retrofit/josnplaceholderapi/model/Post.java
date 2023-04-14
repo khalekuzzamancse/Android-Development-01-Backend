@@ -17,4 +17,15 @@ public class Post {
             ", body='" + body + '\'' +
             '}';
   }
+
+  public Post(String userId, String id, String title, String body) {
+    this.userId = userId;
+    this.id = id;
+    this.title = title;
+    this.body = body;
+  }
+
+  public Post(){
+
+  }
 }
