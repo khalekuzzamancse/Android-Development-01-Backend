@@ -2,8 +2,7 @@ package retrofit.nprnews;
 
 import android.util.Log;
 
-import retrofit.nprnews.Feed;
-import retrofit.nprnews.NPRNewsService;
+import retrofit.nprnews.model.Feed;
 import retrofit2.Call;
 import retrofit2.Response;
 import retrofit2.Retrofit;

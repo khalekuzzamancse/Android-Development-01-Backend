@@ -1,4 +1,4 @@
-package retrofit.nprnews;
+package retrofit.nprnews.model;
 
 import java.util.ArrayList;
 

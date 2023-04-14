@@ -1,4 +1,4 @@
-package retrofit.nprnews;
+package retrofit.nprnews.model;
 
 public class FeedAuthor {
     public String name;
